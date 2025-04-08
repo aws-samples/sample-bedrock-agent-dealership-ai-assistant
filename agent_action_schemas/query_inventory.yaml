@@ -1,0 +1,228 @@
+openapi: 3.0.0
+info:
+  title: Car Dealership Inventory API
+  description: A RESTful API for retrieving car dealership inventory information
+  version: 1.0.0
+  contact:
+    name: Car Dealership API Team
+    email: api@cardealership.example
+
+servers:
+  - url: https://{apiId}.execute-api.{region}.amazonaws.com/dev
+    description: API Gateway endpoint
+    variables:
+      apiId:
+        description: API Gateway ID
+        default: ybshcyc3d2
+      region:
+        description: AWS Region
+        default: us-west-2
+
+paths:
+  /cars:
+    get:
+      summary: List all cars in inventory
+      description: Retrieves a list of all cars in the dealership inventory
+      operationId: getCars
+      responses:
+        '200':
+          description: Successfully retrieved car inventory
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CarListingResponse'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+                
+  /cars/{car_id}:
+    parameters:
+      - name: car_id
+        in: path
+        required: true
+        description: Unique identifier of the car
+        schema:
+          type: string
+    
+    get:
+      summary: Get car details
+      description: Retrieves details of a specific car by its ID
+      operationId: getCarById
+      responses:
+        '200':
+          description: Successfully retrieved car details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CarListing'
+        '404':
+          description: Car not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    CarListingResponse:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          required:
+            - listingsByIds
+          properties:
+            listingsByIds:
+              type: array
+              items:
+                $ref: '#/components/schemas/CarListing'
+
+    CarListing:
+      type: object
+      required:
+        - id
+        - make
+        - model
+        - variant
+        - year
+        - price_gbp
+        - status
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the car listing
+          example: "5q6p7o8n-9m0l-1k2j-3i4h-5g6f7e8d9c0b"
+        reference_number:
+          type: string
+          description: Reference number for the vehicle
+          example: "20230030"
+        make:
+          type: string
+          description: Make/brand of the car
+          example: "Renault"
+        model:
+          type: string
+          description: Model name
+          example: "Clio"
+        variant:
+          type: string
+          description: Vehicle variant
+          example: "Iconic TCe 100"
+        year:
+          type: integer
+          description: Manufacturing year of the vehicle
+          minimum: 1900
+          maximum: 2100
+          example: 2021
+        price_gbp:
+          type: number
+          description: Retail price in Great British Pounds
+          example: 14250
+        engine:
+          type: object
+          description: Engine specifications
+          properties:
+            type:
+              type: string
+              description: Fuel type for the engine
+              example: "Petrol"
+            size_litres:
+              type: number
+              description: Engine size in litres
+              example: 1.0
+            power_bhp:
+              type: integer
+              description: Engine power in brake horsepower
+              example: 100
+            cylinders:
+              type: integer
+              description: Number of cylinders
+              example: 3
+            turbo:
+              type: boolean
+              description: Whether the engine is turbocharged
+              example: true
+        transmission:
+          type: string
+          description: Transmission type
+          example: "Manual"
+        color:
+          type: object
+          properties:
+            exterior:
+              type: string
+              description: Exterior color of the vehicle
+              example: "Valencia Orange"
+            interior:
+              type: string
+              description: Interior color and material
+              example: "Dark Grey Cloth"
+        mileage:
+          type: integer
+          description: Vehicle mileage
+          minimum: 0
+          example: 17890
+        features:
+          type: array
+          description: List of features the vehicle has
+          items:
+            type: string
+          example: [
+            "7-inch EASY LINK Touchscreen",
+            "Satellite Navigation",
+            "Rear Parking Sensors",
+            "Cruise Control",
+            "Automatic Lights & Wipers",
+            "16-inch Diamond Cut Alloy Wheels"
+          ]
+        fuel_economy_mpg:
+          type: number
+          description: Fuel economy in miles per gallon
+          example: 54.3
+        co2_emissions_gkm:
+          type: number
+          description: CO2 emissions in grams per kilometer
+          example: 119
+        tax_band:
+          type: string
+          description: Vehicle tax band
+          example: "E"
+        previous_owners:
+          type: integer
+          description: Number of previous owners
+          minimum: 0
+          example: 1
+        location:
+          type: string
+          description: Location of the vehicle
+          example: "Manchester"
+        status:
+          type: string
+          description: Current status of the vehicle
+          enum: [available, sold, reserved, in_transit]
+          example: "available"
+    
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+          description: Error message
+          example: "Car with ID 5q6p7o8n-9m0l-1k2j-3i4h-5g6f7e8d9c0b not found"
+        error:
+          type: string
+          description: Detailed error information (only included in 500 responses)
+          example: "Internal server error occurred while processing the request"

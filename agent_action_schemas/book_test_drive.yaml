@@ -1,0 +1,221 @@
+openapi: 3.0.0
+info:
+  title: Vehicle Test Drive Booking API
+  description: API for booking vehicle test drives at our car dealership
+  version: 1.0.0
+  contact:
+    name: Car Dealership Support
+    email: support@cardealership.com
+
+servers:
+  - url: https://api.cardealership.com/v1
+    description: Production API Server
+
+paths:
+  /get-available-appointments:
+    post:
+      summary: Get available test drive appointment slots
+      description: Returns available appointment slots within a date range
+      operationId: getAvailableAppointments
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                startDate:
+                  type: string
+                  format: date
+                  description: Start date for appointment search (YYYY-MM-DD)
+                endDate:
+                  type: string
+                  format: date
+                  description: End date for appointment search (YYYY-MM-DD)
+              required:
+                - vehicleType
+      responses:
+        '200':
+          description: Available appointments retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  availableAppointments:
+                    type: object
+                    description: Available appointment slots organized by date
+                    additionalProperties:
+                      type: array
+                      items:
+                        type: string
+                        description: Available time slots in HH:MM format
+        '400':
+          description: Invalid request parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message
+
+  /book-appointment:
+    post:
+      summary: Book a test drive appointment
+      description: Books a test drive appointment for a specific vehicle, date, and time
+      operationId: bookAppointment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                customerName:
+                  type: string
+                  description: Customer's full name
+                customerEmail:
+                  type: string
+                  format: email
+                  description: Customer's email address
+                customerPhone:
+                  type: string
+                  description: Customer's phone number
+                vehicleModel:
+                  type: string
+                  description: The specific vehicle model for the test drive
+                appointmentDate:
+                  type: string
+                  format: date
+                  description: Appointment date (YYYY-MM-DD)
+                appointmentTime:
+                  type: string
+                  pattern: '^([0-1]?[0-9]|2[0-3]):[0-5][0-9]\$'
+                  description: Appointment time (HH:MM)
+              required:
+                - customerName
+                - customerEmail
+                - customerPhone
+                - vehicleModel
+                - appointmentDate
+                - appointmentTime
+      responses:
+        '200':
+          description: Appointment booked successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bookingId:
+                    type: string
+                    format: uuid
+                    description: Unique identifier for the booking
+                  message:
+                    type: string
+                    description: Success message
+                  bookingDetails:
+                    type: object
+                    properties:
+                      customer:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          email:
+                            type: string
+                          phone:
+                            type: string
+                      appointment:
+                        type: object
+                        properties:
+                          date:
+                            type: string
+                            format: date
+                          time:
+                            type: string
+                          vehicle:
+                            type: string
+        '400':
+          description: Invalid request parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message
+
+components:
+  schemas:
+    Vehicle:
+      type: object
+      properties:
+        model:
+          type: string
+          description: Vehicle model name
+      
+    Appointment:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date
+          description: Appointment date (YYYY-MM-DD)
+        time:
+          type: string
+          pattern: '^([0-1]?[0-9]|2[0-3]):[0-5][0-9]\$'
+          description: Appointment time (HH:MM)
+        vehicleModel:
+          type: string
+          description: The vehicle model for the test drive
+        customerName:
+          type: string
+          description: Customer's full name
+        customerEmail:
+          type: string
+          format: email
+          description: Customer's email address
+        customerPhone:
+          type: string
+          description: Customer's phone number
+        bookingId:
+          type: string
+          format: uuid
+          description: Unique identifier for the booking
+
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+security:
+  - ApiKeyAuth: []
+
+tags:
+  - name: Appointments
+    description: Operations related to test drive appointments

@@ -1,0 +1,843 @@
+[
+      {
+        "id": {"S": "3a7e9b12-5d83-4f2c-8e67-1a9c5d8b3f20"},
+        "reference_number": {"S": "20230001"},
+        "make": {"S": "BMW"},
+        "model": {"S": "5 Series"},
+        "variant": {"S": "520d M Sport"},
+        "year": {"N": "2022"},
+        "price_gbp": {"N": "42995"},
+        "engine": {
+          "M": {
+            "type": {"S": "Diesel"},
+            "size_litres": {"N": "2.0"},
+            "power_bhp": {"N": "187"},
+            "cylinders": {"N": "4"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Automatic"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Mineral White"},
+            "interior": {"S": "Black Dakota Leather"}
+          }
+        },
+        "mileage": {"N": "15423"},
+        "features": {
+          "L": [
+            {"S": "Satellite Navigation"},
+            {"S": "Heated Seats"},
+            {"S": "Rear View Camera"},
+            {"S": "Harman/Kardon Sound System"},
+            {"S": "Panoramic Sunroof"},
+            {"S": "Head-up Display"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "52.3"},
+        "co2_emissions_gkm": {"N": "142"},
+        "tax_band": {"S": "G"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "5c2d1e8f-3a7b-49d5-b6c1-0d4f2e3a8c9b"},
+        "reference_number": {"S": "20230002"},
+        "make": {"S": "Audi"},
+        "model": {"S": "Q5"},
+        "variant": {"S": "S Line 45 TFSI quattro"},
+        "year": {"N": "2021"},
+        "price_gbp": {"N": "39750"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "2.0"},
+            "power_bhp": {"N": "245"},
+            "cylinders": {"N": "4"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "S-Tronic"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Daytona Grey"},
+            "interior": {"S": "Black Leather/Alcantara"}
+          }
+        },
+        "mileage": {"N": "18765"},
+        "features": {
+          "L": [
+            {"S": "Virtual Cockpit"},
+            {"S": "Matrix LED Headlights"},
+            {"S": "Bang & Olufsen Sound System"},
+            {"S": "Adaptive Cruise Control"},
+            {"S": "Electrically Adjustable Seats"},
+            {"S": "Parking Assist"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "32.5"},
+        "co2_emissions_gkm": {"N": "198"},
+        "tax_band": {"S": "J"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "9b4f2d6e-7c1a-48b5-9e3f-2a7d8c0b1e5a"},
+        "reference_number": {"S": "20230003"},
+        "make": {"S": "Mercedes-Benz"},
+        "model": {"S": "E-Class"},
+        "variant": {"S": "E300 AMG Line Premium Plus"},
+        "year": {"N": "2023"},
+        "price_gbp": {"N": "52495"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol Hybrid"},
+            "size_litres": {"N": "2.0"},
+            "power_bhp": {"N": "258"},
+            "cylinders": {"N": "4"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "9G-Tronic"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Obsidian Black"},
+            "interior": {"S": "Macchiato Beige Leather"}
+          }
+        },
+        "mileage": {"N": "5230"},
+        "features": {
+          "L": [
+            {"S": "Burmester Surround Sound"},
+            {"S": "Panoramic Sliding Sunroof"},
+            {"S": "Augmented Reality Navigation"},
+            {"S": "360° Camera"},
+            {"S": "Wireless Phone Charging"},
+            {"S": "Driver Assistance Package"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "42.8"},
+        "co2_emissions_gkm": {"N": "149"},
+        "tax_band": {"S": "G"},
+        "previous_owners": {"N": "0"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "7d5e2f1a-6b9c-4d3e-8a7f-5c9b2d1e3f8a"},
+        "reference_number": {"S": "20230004"},
+        "make": {"S": "Volkswagen"},
+        "model": {"S": "Golf"},
+        "variant": {"S": "GTI Clubsport"},
+        "year": {"N": "2022"},
+        "price_gbp": {"N": "35995"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "2.0"},
+            "power_bhp": {"N": "296"},
+            "cylinders": {"N": "4"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "DSG"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Pure White"},
+            "interior": {"S": "Black/Red Sport Cloth"}
+          }
+        },
+        "mileage": {"N": "9876"},
+        "features": {
+          "L": [
+            {"S": "Adaptive Chassis Control"},
+            {"S": "Digital Cockpit Pro"},
+            {"S": "Harman/Kardon Sound System"},
+            {"S": "Dynamic Cornering Lights"},
+            {"S": "Sports Seats Plus"},
+            {"S": "Apple CarPlay & Android Auto"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "38.2"},
+        "co2_emissions_gkm": {"N": "167"},
+        "tax_band": {"S": "H"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "reserved"}
+      },
+      {
+        "id": {"S": "2f8a9c7b-4e6d-5a3b-8c9d-1e2f3a4b5c6d"},
+        "reference_number": {"S": "20230005"},
+        "make": {"S": "Land Rover"},
+        "model": {"S": "Range Rover Sport"},
+        "variant": {"S": "P400e HSE Dynamic"},
+        "year": {"N": "2021"},
+        "price_gbp": {"N": "67990"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol Plug-in Hybrid"},
+            "size_litres": {"N": "2.0"},
+            "power_bhp": {"N": "398"},
+            "cylinders": {"N": "4"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Automatic"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Santorini Black"},
+            "interior": {"S": "Ebony/Ivory Windsor Leather"}
+          }
+        },
+        "mileage": {"N": "21567"},
+        "features": {
+          "L": [
+            {"S": "Meridian Signature Sound System"},
+            {"S": "Touch Pro Duo"},
+            {"S": "Adaptive Dynamics"},
+            {"S": "Electric Deploying Side Steps"},
+            {"S": "Head-up Display"},
+            {"S": "Heated and Cooled Front Seats"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "88.3"},
+        "co2_emissions_gkm": {"N": "72"},
+        "tax_band": {"S": "C"},
+        "electric_only_range_miles": {"N": "31"},
+        "previous_owners": {"N": "2"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "6e4d2c0b-8a9f-7e6d-5c4b-3a2e1d0f9c8b"},
+        "reference_number": {"S": "20230006"},
+        "make": {"S": "Ford"},
+        "model": {"S": "Mustang"},
+        "variant": {"S": "5.0 V8 GT"},
+        "year": {"N": "2020"},
+        "price_gbp": {"N": "42500"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "5.0"},
+            "power_bhp": {"N": "450"},
+            "cylinders": {"N": "8"},
+            "turbo": {"BOOL": false}
+          }
+        },
+        "transmission": {"S": "Manual"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Race Red"},
+            "interior": {"S": "Black Leather"}
+          }
+        },
+        "mileage": {"N": "12345"},
+        "features": {
+          "L": [
+            {"S": "MagneRide Adaptive Suspension"},
+            {"S": "Active Valve Performance Exhaust"},
+            {"S": "B&O Premium Audio System"},
+            {"S": "SYNC 3 Navigation"},
+            {"S": "Recaro Sports Seats"},
+            {"S": "19-inch Forged Alloy Wheels"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "23.9"},
+        "co2_emissions_gkm": {"N": "268"},
+        "tax_band": {"S": "L"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p"},
+        "reference_number": {"S": "20230007"},
+        "make": {"S": "Tesla"},
+        "model": {"S": "Model 3"},
+        "variant": {"S": "Long Range Dual Motor"},
+        "year": {"N": "2022"},
+        "price_gbp": {"N": "47995"},
+        "engine": {
+          "M": {
+            "type": {"S": "Electric"},
+            "battery_capacity_kwh": {"N": "82"},
+            "power_bhp": {"N": "346"},
+            "motors": {"N": "2"}
+          }
+        },
+        "transmission": {"S": "Single-speed"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Midnight Silver Metallic"},
+            "interior": {"S": "Black Vegan Leather"}
+          }
+        },
+        "mileage": {"N": "8765"},
+        "features": {
+          "L": [
+            {"S": "Autopilot"},
+            {"S": "Full Self-Driving Capability"},
+            {"S": "Premium Interior"},
+            {"S": "Glass Roof"},
+            {"S": "19-inch Sport Wheels"},
+            {"S": "Heat Pump"}
+          ]
+        },
+        "range_miles": {"N": "360"},
+        "charging_rate_kwh": {"N": "250"},
+        "tax_band": {"S": "A"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "9f8e7d6c-5b4a-3c2d-1e0f-9g8h7i6j5k4l"},
+        "reference_number": {"S": "20230008"},
+        "make": {"S": "Toyota"},
+        "model": {"S": "GR Yaris"},
+        "variant": {"S": "Circuit Pack"},
+        "year": {"N": "2021"},
+        "price_gbp": {"N": "32995"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.6"},
+            "power_bhp": {"N": "257"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Manual"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Precious Black"},
+            "interior": {"S": "Black Ultrasuede/Leather"}
+          }
+        },
+        "mileage": {"N": "7653"},
+        "features": {
+          "L": [
+            {"S": "GR-Four AWD System"},
+            {"S": "Torsen Limited-Slip Differentials"},
+            {"S": "Circuit-tuned Suspension"},
+            {"S": "JBL Premium Sound System"},
+            {"S": "GR Sports Seats"},
+            {"S": "Performance Brakes"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "34.3"},
+        "co2_emissions_gkm": {"N": "186"},
+        "tax_band": {"S": "I"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "5a4b3c2d-1e0f-9g8h-7i6j-5k4l3m2n1o0p"},
+        "reference_number": {"S": "20230009"},
+        "make": {"S": "Porsche"},
+        "model": {"S": "911"},
+        "variant": {"S": "Carrera 4S"},
+        "year": {"N": "2020"},
+        "price_gbp": {"N": "94995"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "3.0"},
+            "power_bhp": {"N": "450"},
+            "cylinders": {"N": "6"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "PDK"},
+        "color": {
+          "M": {
+            "exterior": {"S": "GT Silver Metallic"},
+            "interior": {"S": "Bordeaux Red Leather"}
+          }
+        },
+        "mileage": {"N": "12560"},
+        "features": {
+          "L": [
+            {"S": "Sport Chrono Package"},
+            {"S": "PASM Sport Suspension"},
+            {"S": "Burmester High-End Surround Sound"},
+            {"S": "Front Axle Lift System"},
+            {"S": "Adaptive Sports Seats Plus"},
+            {"S": "LED Matrix Headlights"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "28.5"},
+        "co2_emissions_gkm": {"N": "227"},
+        "tax_band": {"S": "K"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "0p9o8n7m-6l5k-4j3i-2h1g-0f1e2d3c4b5a"},
+        "reference_number": {"S": "20230010"},
+        "make": {"S": "Jaguar"},
+        "model": {"S": "I-PACE"},
+        "variant": {"S": "HSE"},
+        "year": {"N": "2022"},
+        "price_gbp": {"N": "64790"},
+        "engine": {
+          "M": {
+            "type": {"S": "Electric"},
+            "battery_capacity_kwh": {"N": "90"},
+            "power_bhp": {"N": "396"},
+            "motors": {"N": "2"}
+          }
+        },
+        "transmission": {"S": "Single-speed"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Caesium Blue"},
+            "interior": {"S": "Light Oyster Windsor Leather"}
+          }
+        },
+        "mileage": {"N": "9870"},
+        "features": {
+          "L": [
+            {"S": "Adaptive Dynamics"},
+            {"S": "Meridian Surround Sound System"},
+            {"S": "Head-up Display"},
+            {"S": "Adaptive Cruise Control"},
+            {"S": "Premium LED Headlights"},
+            {"S": "Touch Pro Duo"}
+          ]
+        },
+        "range_miles": {"N": "292"},
+        "charging_rate_kwh": {"N": "100"},
+        "tax_band": {"S": "A"},
+        "battery_warranty": {"S": "8 years / 100,000 miles"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "3f7e2d19-4c83-5a2b-9e67-8b5c1d2e3f4a"},
+        "reference_number": {"S": "20230021"},
+        "make": {"S": "Ford"},
+        "model": {"S": "Fiesta"},
+        "variant": {"S": "ST-Line"},
+        "year": {"N": "2021"},
+        "price_gbp": {"N": "15995"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.0"},
+            "power_bhp": {"N": "125"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Manual"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Frozen White"},
+            "interior": {"S": "Black Cloth"}
+          }
+        },
+        "mileage": {"N": "18765"},
+        "features": {
+          "L": [
+            {"S": "SYNC 3 Navigation"},
+            {"S": "Apple CarPlay & Android Auto"},
+            {"S": "Sports Suspension"},
+            {"S": "Rear View Camera"},
+            {"S": "ST-Line Body Kit"},
+            {"S": "Heated Front Seats"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "54.3"},
+        "co2_emissions_gkm": {"N": "118"},
+        "tax_band": {"S": "E"},
+        "warranty_remaining": {"S": "9 months"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "7b9c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e"},
+        "reference_number": {"S": "20230022"},
+        "make": {"S": "Vauxhall"},
+        "model": {"S": "Corsa"},
+        "variant": {"S": "SRi Nav Premium"},
+        "year": {"N": "2022"},
+        "price_gbp": {"N": "14750"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.2"},
+            "power_bhp": {"N": "100"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Manual"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Power Orange"},
+            "interior": {"S": "Black/Grey Cloth"}
+          }
+        },
+        "mileage": {"N": "9870"},
+        "features": {
+          "L": [
+            {"S": "10-inch Touchscreen Navigation"},
+            {"S": "Digital Instrument Cluster"},
+            {"S": "Heated Seats & Steering Wheel"},
+            {"S": "Lane Keep Assist"},
+            {"S": "LED Headlights"},
+            {"S": "Parking Sensors"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "52.3"},
+        "co2_emissions_gkm": {"N": "123"},
+        "tax_band": {"S": "E"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "2c3d4e5f-6g7h-8i9j-0k1l-2m3n4o5p6q7r"},
+        "reference_number": {"S": "20230023"},
+        "make": {"S": "Volkswagen"},
+        "model": {"S": "Polo"},
+        "variant": {"S": "Match"},
+        "year": {"N": "2020"},
+        "price_gbp": {"N": "13495"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.0"},
+            "power_bhp": {"N": "95"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "DSG"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Reflex Silver"},
+            "interior": {"S": "Titanium Black Cloth"}
+          }
+        },
+        "mileage": {"N": "24560"},
+        "features": {
+          "L": [
+            {"S": "8-inch Touchscreen"},
+            {"S": "Apple CarPlay & Android Auto"},
+            {"S": "Adaptive Cruise Control"},
+            {"S": "Front & Rear Parking Sensors"},
+            {"S": "Automatic Lights & Wipers"},
+            {"S": "Air Conditioning"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "50.4"},
+        "co2_emissions_gkm": {"N": "128"},
+        "tax_band": {"S": "F"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "9d8c7b6a-5f4e-3d2c-1b0a-9z8y7x6w5v4u"},
+        "reference_number": {"S": "20230024"},
+        "make": {"S": "Seat"},
+        "model": {"S": "Ibiza"},
+        "variant": {"S": "FR Sport"},
+        "year": {"N": "2021"},
+        "price_gbp": {"N": "16250"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.0"},
+            "power_bhp": {"N": "110"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Manual"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Mystery Blue"},
+            "interior": {"S": "Black Sport Cloth"}
+          }
+        },
+        "mileage": {"N": "16540"},
+        "features": {
+          "L": [
+            {"S": "Digital Cockpit"},
+            {"S": "Full LED Headlights"},
+            {"S": "BeatsAudio Sound System"},
+            {"S": "Keyless Entry & Start"},
+            {"S": "Climate Control"},
+            {"S": "18-inch Alloy Wheels"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "51.4"},
+        "co2_emissions_gkm": {"N": "124"},
+        "tax_band": {"S": "E"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "4p5o6n7m-8l9k-0j1i-2h3g-4f5e6d7c8b9a"},
+        "reference_number": {"S": "20230025"},
+        "make": {"S": "Toyota"},
+        "model": {"S": "Yaris"},
+        "variant": {"S": "Design Hybrid"},
+        "year": {"N": "2022"},
+        "price_gbp": {"N": "19495"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol Hybrid"},
+            "size_litres": {"N": "1.5"},
+            "power_bhp": {"N": "116"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": false}
+          }
+        },
+        "transmission": {"S": "CVT"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Platinum White"},
+            "interior": {"S": "Grey Fabric"}
+          }
+        },
+        "mileage": {"N": "9870"},
+        "features": {
+          "L": [
+            {"S": "Toyota Touch 2 with Navigation"},
+            {"S": "Reversing Camera"},
+            {"S": "Smart Entry"},
+            {"S": "Dual-zone Climate Control"},
+            {"S": "Blind Spot Monitor"},
+            {"S": "Wireless Phone Charger"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "68.9"},
+        "co2_emissions_gkm": {"N": "92"},
+        "tax_band": {"S": "D"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "1z2y3x4w-5v6u-7t8s-9r0q-1p2o3n4m5l6k"},
+        "reference_number": {"S": "20230026"},
+        "make": {"S": "Nissan"},
+        "model": {"S": "Juke"},
+        "variant": {"S": "N-Connecta"},
+        "year": {"N": "2021"},
+        "price_gbp": {"N": "17995"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.0"},
+            "power_bhp": {"N": "114"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "DCT"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Fuji Sunset Red"},
+            "interior": {"S": "Black Cloth"}
+          }
+        },
+        "mileage": {"N": "18765"},
+        "features": {
+          "L": [
+            {"S": "NissanConnect 8-inch Touchscreen"},
+            {"S": "360° Around View Monitor"},
+            {"S": "Heated Front Seats"},
+            {"S": "Climate Control"},
+            {"S": "19-inch Alloy Wheels"},
+            {"S": "Safety Shield Technology"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "47.9"},
+        "co2_emissions_gkm": {"N": "134"},
+        "tax_band": {"S": "F"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "7j8i9h0g-1f2e-3d4c-5b6a-7z8y9x0w1v2u"},
+        "reference_number": {"S": "20230027"},
+        "make": {"S": "Hyundai"},
+        "model": {"S": "i20"},
+        "variant": {"S": "Premium"},
+        "year": {"N": "2022"},
+        "price_gbp": {"N": "16750"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.0"},
+            "power_bhp": {"N": "100"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Manual"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Intense Blue"},
+            "interior": {"S": "Black Cloth/Leather"}
+          }
+        },
+        "mileage": {"N": "8765"},
+        "features": {
+          "L": [
+            {"S": "10.25-inch Touchscreen Navigation"},
+            {"S": "Bluelink Connected Car Services"},
+            {"S": "Rear View Camera"},
+            {"S": "Climate Control"},
+            {"S": "Heated Seats & Steering Wheel"},
+            {"S": "Wireless Phone Charging"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "54.3"},
+        "co2_emissions_gkm": {"N": "118"},
+        "tax_band": {"S": "E"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "3t4s5r6q-7p8o-9n0m-1l2k-3j4i5h6g7f8e"},
+        "reference_number": {"S": "20230028"},
+        "make": {"S": "Kia"},
+        "model": {"S": "Ceed"},
+        "variant": {"S": "3"},
+        "year": {"N": "2021"},
+        "price_gbp": {"N": "18495"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.5"},
+            "power_bhp": {"N": "158"},
+            "cylinders": {"N": "4"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Manual"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Infra Red"},
+            "interior": {"S": "Black Cloth/Faux Leather"}
+          }
+        },
+        "mileage": {"N": "14590"},
+        "features": {
+          "L": [
+            {"S": "10.25-inch Touchscreen Navigation"},
+            {"S": "Heated Front Seats"},
+            {"S": "Smart Cruise Control"},
+            {"S": "Lane Follow Assist"},
+            {"S": "Reversing Camera"},
+            {"S": "Privacy Glass"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "49.6"},
+        "co2_emissions_gkm": {"N": "129"},
+        "tax_band": {"S": "F"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "9a8b7c6d-5e4f-3g2h-1i0j-9k8l7m6n5o4p"},
+        "reference_number": {"S": "20230029"},
+        "make": {"S": "Skoda"},
+        "model": {"S": "Fabia"},
+        "variant": {"S": "Monte Carlo"},
+        "year": {"N": "2022"},
+        "price_gbp": {"N": "19995"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.0"},
+            "power_bhp": {"N": "110"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "DSG"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Race Blue"},
+            "interior": {"S": "Black/Red Sport Cloth"}
+          }
+        },
+        "mileage": {"N": "9860"},
+        "features": {
+          "L": [
+            {"S": "Amundsen 9.2-inch Navigation System"},
+            {"S": "Virtual Cockpit"},
+            {"S": "Sports Suspension"},
+            {"S": "LED Headlights"},
+            {"S": "Panoramic Glass Roof"},
+            {"S": "Monte Carlo Design Package"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "50.4"},
+        "co2_emissions_gkm": {"N": "128"},
+        "tax_band": {"S": "F"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "London"},
+        "status": {"S": "available"}
+      },
+      {
+        "id": {"S": "5q6p7o8n-9m0l-1k2j-3i4h-5g6f7e8d9c0b"},
+        "reference_number": {"S": "20230030"},
+        "make": {"S": "Renault"},
+        "model": {"S": "Clio"},
+        "variant": {"S": "Iconic TCe 100"},
+        "year": {"N": "2021"},
+        "price_gbp": {"N": "14250"},
+        "engine": {
+          "M": {
+            "type": {"S": "Petrol"},
+            "size_litres": {"N": "1.0"},
+            "power_bhp": {"N": "100"},
+            "cylinders": {"N": "3"},
+            "turbo": {"BOOL": true}
+          }
+        },
+        "transmission": {"S": "Manual"},
+        "color": {
+          "M": {
+            "exterior": {"S": "Valencia Orange"},
+            "interior": {"S": "Dark Grey Cloth"}
+          }
+        },
+        "mileage": {"N": "17890"},
+        "features": {
+          "L": [
+            {"S": "7-inch EASY LINK Touchscreen"},
+            {"S": "Satellite Navigation"},
+            {"S": "Rear Parking Sensors"},
+            {"S": "Cruise Control"},
+            {"S": "Automatic Lights & Wipers"},
+            {"S": "16-inch Diamond Cut Alloy Wheels"}
+          ]
+        },
+        "fuel_economy_mpg": {"N": "54.3"},
+        "co2_emissions_gkm": {"N": "119"},
+        "tax_band": {"S": "E"},
+        "previous_owners": {"N": "1"},
+        "location": {"S": "Manchester"},
+        "status": {"S": "available"}
+      }
+]

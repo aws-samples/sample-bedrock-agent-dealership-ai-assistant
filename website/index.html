@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnyCompany Auto Group - Find Your Dream Car Today</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="config.js"></script>
+    <!-- Amazon Cognito SDK -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1048.0.min.js"></script>
+    <script src="https://unpkg.com/amazon-cognito-identity-js@6.3.1/dist/amazon-cognito-identity.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://placehold.co/200x60?text=AnyCompany+Auto" alt="AnyCompany Auto Group">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Finance</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="#" class="cta-button">Contact Us</a></li>
+            <li><a href="#" id="auth-button" class="auth-button">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Vehicle</h1>
+            <p>Browse our extensive inventory of premium vehicles at competitive prices</p>
+            <button class="cta-button">View Inventory</button>
+        </div>
+    </div>
+
+    <!-- Featured Cars Section -->
+    <section class="featured-cars">
+        <h2>Featured Vehicles</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="https://placehold.co/300x200?text=SUV" alt="SUV">
+                <h3>2023 Luxury SUV</h3>
+                <p class="price">£45,995</p>
+                <p>24,000 miles • AWD • 7 Seats</p>
+                <button class="secondary-button">View Details</button>
+            </div>
+            <div class="car-card">
+                <img src="https://placehold.co/300x200?text=Estate" alt="Estate">
+                <h3>2022 Premium Estate</h3>
+                <p class="price">£38,500</p>
+                <p>18,500 miles • Auto • Leather</p>
+                <button class="secondary-button">View Details</button>
+            </div>
+            <div class="car-card">
+                <img src="https://placehold.co/300x200?text=Truck" alt="Truck">
+                <h3>2023 Heavy Duty Truck</h3>
+                <p class="price">£52,995</p>
+                <p>12,000 miles • 4WD • Towing Pkg</p>
+                <button class="secondary-button">View Details</button>
+            </div>
+            <div class="car-card">
+                <img src="https://placehold.co/300x200?text=Electric" alt="Electric">
+                <h3>2023 Electric Crossover</h3>
+                <p class="price">£56,995</p>
+                <p>8,500 miles • 300mi Range • AWD</p>
+                <button class="secondary-button">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-car fa-3x"></i>
+                <h3>Vehicle Sales</h3>
+                <p>New and pre-owned vehicles with flexible financing options.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools fa-3x"></i>
+                <h3>Service & Repair</h3>
+                <p>Factory-trained technicians to keep your vehicle in top condition.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-money-check-alt fa-3x"></i>
+                <h3>Financing</h3>
+                <p>Competitive rates and flexible terms to fit your budget.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-exchange-alt fa-3x"></i>
+                <h3><a href="valuations.html" style="text-decoration: none; color: inherit;">Trade-In</a></h3>
+                <p>Get the best value for your current vehicle with our fair appraisals. <a href="valuations.html">Learn more</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AnyCompany Auto Group</h3>
+                <p>123 Any Street<br>, London, UK<br>Phone: 555-0100</p>
+                <p>987 Main Street<br>, Manchester, UK<br>Phone: 555-0199</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Monday-Friday: 9am-8pm<br>Saturday: 9am-6pm<br>Sunday: 10am-4pm (London)<br>Sunday: Closed (Manchester)</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Inventory</a></li>
+                    <li><a href="#">Financing</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="valuations.html">Valuations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AnyCompany Auto Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Bot Popup -->
+    <div class="chat-widget" id="chat-widget">
+        <!-- Chat toggle button -->
+        <div class="chat-toggle" id="chat-toggle">
+            <div class="chat-toggle-icon">
+                <i class="fas fa-comment"></i>
+            </div>
+            <div class="chat-toggle-text">Chat with us</div>
+        </div>
+        <!-- Chat window -->
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <h3><i class="fas fa-car"></i> AnyCompany Auto Assistant</h3>
+                <button id="minimize-chat"><i class="fas fa-minus"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <div class="message-content">
+                        <i class="fas fa-robot bot-icon"></i>
+                        <div class="message-text">Hi there! I'm your AnyCompany Auto virtual assistant. How can I help you with your vehicle search today?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <textarea id="user-input" placeholder="Type your message here..." rows="1"></textarea>
+                <button id="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Callback page handler -->
+    <script>
+        // Check if this is a callback from Cognito auth
+        function handleAuthCallback() {
+            const urlParams = new URLSearchParams(window.location.hash.substring(1));
+            const idToken = urlParams.get('id_token');
+            const accessToken = urlParams.get('access_token');
+            
+            if (idToken && accessToken) {
+                // Store tokens in local storage
+                localStorage.setItem('idToken', idToken);
+                localStorage.setItem('accessToken', accessToken);
+                
+                // Clean up the URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+                
+                // Update UI
+                updateAuthUI(true);
+                return true;
+            }
+            return false;
+        }
+        
+        // Handle auth callback when page loads
+        handleAuthCallback();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
